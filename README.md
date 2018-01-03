@@ -67,6 +67,7 @@ $ python3 app.py
 
 ## Usage
 起始state為 `main`.
+
 在任何state，輸入"Bismarck"可回到state `main`
 
 * main
