@@ -8,7 +8,9 @@ Final project of NCKU TOC cource
 	*   transitions==0.5.0
 	*   pygraphviz==1.3.1
 	*   python-telegram-bot==5.3.0
+	
 	**ADVANCE FEATURE NEED**
+	
 	*   requests
 	*   beautifulsoup4
 	*   Selenium
