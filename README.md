@@ -88,22 +88,22 @@ $ python3 app.py
 		* Go to state `talk`
 		* Reply: "提督、新年も頑張っていきましょう。もちろん私は、いつだって頑張ってるわ。" (提督，新年也請努力吧。我當然是一直在努力的咯。)
 	* Input: 關鍵字"累"
-        	* Go to state `talk`
+		* Go to state `talk`
 		* Reply: "アトミラール、何事もあまり頑張り過ぎちゃだめよ。気分転換も、大事なのよ？" (Admiral，幹什麼事情都不要努力過頭了喲。轉換一下心情也是很重要的。)
 	* Input: 關鍵字 髒話 
-        	* Go to state `talk`
+		* Go to state `talk`
 		* Reply: 髒話
 * photo
 	* Input: "再一張"
-        	* Go to state `photo`
+		* Go to state `photo`
 		* Reply: 1張圖片
 * idle
 	* Input: "Bismarck"
-    		* Go to state `main`
+		* Go to state `main`
 		* Reply: もう～！この私を放置するなんて、貴方も相当偉くなったものね！ (把我放置不管，你也變得很了不起了嘛！陪陪你出擊呀演習呀也可以的呦！)
 * help
 	* Input: 任何
-        	* Go to state `help`
+		* Go to state `help`
 		* Reply: 簡易使用教學
 	
 ### 爬蟲功能 Example
