@@ -70,46 +70,41 @@ $ python3 app.py
 在任何state，輸入"Bismarck"可回到state `main`
 
 * main
-    * Input: "聊天" or "talk"
-        * Go to state `talk`
-	* Reply: "いいよ"（好喔）
-
-    * Input: "照片" or "photo"
-	* Go to state `photo`
-	* Reply: "いいよ"（好喔） 且 從預設資料夾中隨機傳送一張圖片
-	
-    * Input: "為什麼不理我" or "help"
-        * Go to state `help`
-	* Reply: 簡易使用教學
+	* Input: "聊天" or "talk"
+		* Go to state `talk`
+		* Reply: "いいよ"（好喔）
+	* Input: "照片" or "photo"
+		* Go to state `photo`
+		* Reply: "いいよ"（好喔） 且 從預設資料夾中隨機傳送一張圖片	
+	* Input: "為什麼不理我" or "help"
+        	* Go to state `help`
+		* Reply: 簡易使用教學
 * talk
-    * Input: 關鍵字"聖誕", "聖誕禮物"
-        * Go to state `talk`
-	* Reply("聖誕"): "今年もクリスマスの季節なのね。早いわね。さ、プレゼント渡していいのよ？"（今年也到聖誕節了吶。過的真快啊。那個，給我送禮物也是可以的喲！）
-	* Reply("聖誕禮物"): "これを私に？･･･Danke schön!"（這個給我？…非常感謝。）
-	
-    * Input: 關鍵字"新年", "新年快樂"
-	* Go to state `talk`
-	* Reply: "提督、新年も頑張っていきましょう。もちろん私は、いつだって頑張ってるわ。" (提督，新年也請努力吧。我當然是一直在努力的咯。)
-	
-    * Input: 關鍵字"累"
-        * Go to state `talk`
-	* Reply: "アトミラール、何事もあまり頑張り過ぎちゃだめよ。気分転換も、大事なのよ？" (Admiral，幹什麼事情都不要努力過頭了喲。轉換一下心情也是很重要的。)
-	
-    * Input: 關鍵字 髒話 
-        * Go to state `talk`
-	* Reply: 髒話
+	* Input: 關鍵字"聖誕", "聖誕禮物"
+        	* Go to state `talk`
+		* Reply("聖誕"): "今年もクリスマスの季節なのね。早いわね。さ、プレゼント渡していいのよ？"（今年也到聖誕節了吶。過的真快啊。那個，給我送禮物也是可以的喲！）
+		* Reply("聖誕禮物"): "これを私に？･･･Danke schön!"（這個給我？…非常感謝。）
+    	* Input: 關鍵字"新年", "新年快樂"
+		* Go to state `talk`
+		* Reply: "提督、新年も頑張っていきましょう。もちろん私は、いつだって頑張ってるわ。" (提督，新年也請努力吧。我當然是一直在努力的咯。)
+    	* Input: 關鍵字"累"
+        	* Go to state `talk`
+		* Reply: "アトミラール、何事もあまり頑張り過ぎちゃだめよ。気分転換も、大事なのよ？" (Admiral，幹什麼事情都不要努力過頭了喲。轉換一下心情也是很重要的。)
+	* Input: 關鍵字 髒話 
+        	* Go to state `talk`
+		* Reply: 髒話
 * photo
-    * Input: "再一張"
-        * Go to state `photo`
-	* Reply: 1張圖片
+	* Input: "再一張"
+        	* Go to state `photo`
+		* Reply: 1張圖片
 * idle
-    * Input: "Bismarck"
-    	* Go to state `main`
-	* Reply: もう～！この私を放置するなんて、貴方も相当偉くなったものね！ (把我放置不管，你也變得很了不起了嘛！陪陪你出擊呀演習呀也可以的呦！)
+    	* Input: "Bismarck"
+    		* Go to state `main`
+		* Reply: もう～！この私を放置するなんて、貴方も相当偉くなったものね！ (把我放置不管，你也變得很了不起了嘛！陪陪你出擊呀演習呀也可以的呦！)
 * help
-    * Input: 任何
-        * Go to state `help`
-	* Reply: 簡易使用教學
+    	* Input: 任何
+        	* Go to state `help`
+		* Reply: 簡易使用教學
 	
 ### 爬蟲功能 Example
 1. Enable advance feature 參考 Enable advance feature --- **即時圖片爬蟲**
