@@ -116,6 +116,7 @@ $ python3 app.py
 
 ## Image and Voice Resource
 All image file used is collected from pixiv.net and twitter.com, only used for education
+
 All voice file used is collected from zh.moegirl.org, only used for education 
 
 ## The author of template code
