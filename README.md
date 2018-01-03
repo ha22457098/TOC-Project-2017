@@ -26,7 +26,9 @@ $ python3 app.py
 ```
 
 第一次執行會生成 `.token` 和 `.webhook` 檔案
-將bot的token和webhook的位址分別填入檔案後繼續
+
+將bot的token和webhook的位址分別填入檔案後繼續即可
+
 
 ### Using `ngrok` as a proxy
 
