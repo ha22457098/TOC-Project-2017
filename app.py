@@ -156,8 +156,8 @@ def check_time(update):
     '''
     now_time = datetime.datetime.now()
     diff = now_time - time_table[update.message.chat_id]
-    print(diff)
-    print(diff > reset_time)
+    #print(diff)
+    #print(diff > reset_time)
 
     if ( diff > reset_time ):
         machine.my_reset(update)
@@ -175,12 +175,15 @@ def _set_webhook():
 @app.route('/hook', methods=['POST'])
 def webhook_handler():
     update = telegram.Update.de_json(request.get_json(force=True), bot)
-    print(" ====== up ======")
-    print("chat_id = " + str(update.message.chat_id))
-    print("content = " + update.message.text)
-    print("before state = " + machine.state)
+    #print(" ====== up ======")
+    #print("chat_id = " + str(update.message.chat_id))
+    #print("content = " + update.message.text)
+    #print("before state = " + machine.state)
+    if update.message == None:
+        return 'ok'
 
     if update.message.chat_id not in state_table:
+        machine.machine.set_state('main')
         state_table[update.message.chat_id] = machine.state
     else:
         machine.machine.set_state(state_table[update.message.chat_id])
@@ -195,7 +198,7 @@ def webhook_handler():
     else:
         machine.set_voice_flag(update, voice_flag_table[update.message.chat_id])
 
-    print("now state = " + machine.state)
+    #print("now state = " + machine.state)
 
     if machine.state == 'idle':
         machine.edge_idle(update)
@@ -208,10 +211,10 @@ def webhook_handler():
     elif machine.state == 'help':
         machine.edge_help(update)
 
-    print("after state = " + machine.state)
+    #print("after state = " + machine.state)
     state_table[update.message.chat_id] = machine.state
     voice_flag_table[update.message.chat_id] = machine.get_voice_flag(update)
-    print(" ======down======")
+    #print(" ======down======")
     return 'ok'
 
 

@@ -219,6 +219,8 @@ class TocMachine(GraphMachine):
             elif self.realtime_photo_enable:
                 self.realtime_photo_flag = True
                 update.message.reply_text('OK')
+        elif '可愛' in text or '漂亮' in text or '美' in text:
+            update.message.reply_text('良いのよ？もっと褒めても。')
         return True
     
     def is_help_goto_main(self, update):
